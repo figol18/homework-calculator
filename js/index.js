@@ -3,7 +3,7 @@ const display = document.querySelector('.calculator .display');
 document.querySelectorAll('.numbers button')
   .forEach( btn => btn.addEventListener('click', numClick));
 
-let operator = document.querySelectorAll('.operators button');
+const operator = document.querySelectorAll('.operators button');
 operator.forEach( btn => btn.addEventListener('click', operClick));
 
 function numClick(event) {

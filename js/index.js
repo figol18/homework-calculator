@@ -12,7 +12,7 @@ function numClick(event) {
 }
 
 function operClick(event) {
-  if(display.value.slice(-1) == '+' || display.value.slice(-1) == '-' || display.value.slice(-1) == '*' || display.value.slice(-1) == '/') {
+  if(display.value.slice(-1) === '+' || display.value.slice(-1) === '-' || display.value.slice(-1) === '*' || display.value.slice(-1) === '/') {
         display.value = display.value.replace(/\D/g, event.target.innerText);
   } else {
      display.value += event.target.innerText;

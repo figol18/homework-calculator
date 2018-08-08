@@ -3,7 +3,7 @@ const display = document.querySelector('.calculator .display');
 document.querySelectorAll('.numbers button')
   .forEach( btn => btn.addEventListener('click', numClick));
 
-const operator = document.querySelectorAll('.operators button');
+let operator = document.querySelectorAll('.operators button');
 operator.forEach( btn => btn.addEventListener('click', operClick));
 
 function numClick(event) {
@@ -12,7 +12,7 @@ function numClick(event) {
 }
 
 function operClick(event) {
-  if(display.value.slice(-1) === '+' || display.value.slice(-1) === '-' || display.value.slice(-1) === '*' || display.value.slice(-1) === '/') {
+  if('+-*/'.includes(display.value.slice(-1))) {
         display.value = display.value.replace(/\D/g, event.target.innerText);
   } else {
      display.value += event.target.innerText;
